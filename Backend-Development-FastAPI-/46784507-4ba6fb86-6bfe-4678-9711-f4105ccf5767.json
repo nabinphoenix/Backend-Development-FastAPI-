@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "46784507-4ba6fb86-6bfe-4678-9711-f4105ccf5767",
+		"name": "Backend-Development-FastAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Can Only Do",
+			"item": [
+				{
+					"name": "Admin Login",
+					"id": "46784507-0f4cc810-a847-439c-974c-01286526de4d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Read Current User",
+					"id": "46784507-a9e1c0e1-0cf8-4d92-9e7a-8bad0b43bc7b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Read All User",
+					"id": "46784507-839247c2-809e-4515-990b-5d311128f374",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Read user by their ID",
+					"id": "46784507-738d1a32-c104-4098-b493-266caf38cb4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update User by their ID",
+					"id": "46784507-6560dc8d-4e5e-4b5f-9665-6f765cb78807",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a user by ID",
+					"id": "46784507-6cd1a91f-e51c-4a78-9097-e15ef4888a80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc1NjY1OTYwNn0.6tt-j_t7VwtXtsvWFk_d2WFXp2DUeYRVg9Xqgu7wXBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}users/22",
+							"host": [
+								"{{api}}users"
+							],
+							"path": [
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All TODOs",
+					"id": "46784507-2e93a6ef-bd05-417d-a79a-c612a7efb1aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc1NjY1OTYwNn0.6tt-j_t7VwtXtsvWFk_d2WFXp2DUeYRVg9Xqgu7wXBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}todos/all",
+							"host": [
+								"{{api}}todos"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46784507-b4cb0131-c9bf-49fc-8dd5-26bed8f0242a"
+		},
+		{
+			"name": "ToDo",
+			"item": [
+				{
+					"name": "Get ToDo created by a user",
+					"id": "46784507-c9917454-5083-411c-9e38-88b40d32807c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}todos/",
+							"host": [
+								"{{api}}todos"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a ToDo",
+					"id": "46784507-f78f2182-de26-449b-b966-6404ac3ab183",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Develop FastAPI authentication endpoints\",\r\n  \"description\": \"Create endpoints for user registration, login, and token refresh using FastAPI, OAuth2, and JWT authentication.\",\r\n  \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}todos/",
+							"host": [
+								"{{api}}todos"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a ToDo by ID",
+					"id": "46784507-a410078f-cd56-44ec-ad18-624dfe5a4266",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated Develop FastAPI authentication endpoints\",\r\n  \"description\": \"Create endpoints for user registration, login, and token refresh using FastAPI, OAuth2, and JWT authentication.\",\r\n  \"completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}todos/8",
+							"host": [
+								"{{api}}todos"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a ToDo by ID",
+					"id": "46784507-651603c0-49fe-4865-b9e1-7d4997b4adf9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api}}todos/8",
+							"host": [
+								"{{api}}todos"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46784507-1446e8f5-f820-4642-9939-7aab1789dde6"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Read Current User",
+					"id": "46784507-0620efd2-8a75-4436-a3ab-a3a856e72ea8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api}}users/me",
+							"host": [
+								"{{api}}users"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Current User",
+					"id": "46784507-df134ef4-c2aa-4182-863a-f02ad6cf7e2b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbiIsImV4cCI6MTc1NjY2MDM1Mn0.dMsqYrmlsm7uOo22Tik1us_9bbd2fSaX7i2WZCU-WF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"current_password\": \"nabin123\",\r\n  \"username\": \"nabin12\",\r\n  \"email\": \"nabinepali@gmail.com\",\r\n  \"new_password\": \"nabin12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}users/me",
+							"host": [
+								"{{api}}users"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Current User",
+					"id": "46784507-dcd5c584-6b6b-4f70-9384-1b62a6081943",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWJpbjEyIiwiZXhwIjoxNzU2NjYxMDg5fQ.JC3Vvk3gnd_PU5AZEiSxlcgmMg3e2x3Str-E8OvntPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"current_password\": \"nabin12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}users/me",
+							"host": [
+								"{{api}}users"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46784507-0ff9fbb7-7f6b-4042-9830-c02469d08032"
+		},
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register a new user",
+					"id": "46784507-b6c1028c-af00-4f6d-8c5e-6c05c6541c86",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"nabin\",\r\n  \"email\": \"nabin@gmail.com\",\r\n  \"password\": \"nabin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}register/",
+							"host": [
+								"{{api}}register"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46784507-aa24ccf5-f881-4b25-9c52-1a4b9ea17544"
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
