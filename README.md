@@ -11,7 +11,7 @@ The project is fully compatible with **Python >=3.11**, **SQLAlchemy**, and **Py
 
 Developing a backend from scratch can be challenging. This repository provides a **ready-to-use template** with:
 
-- **FastAPI Integration**: A modern, async-first web framework for Python.  (https://fastapi.tiangolo.com/learn/)
+- **FastAPI Integration**: A modern, async-first web framework for Python.  
 - **Authentication & Authorization**: JWT-based login, role-based access control (admin/user).  
 - **ToDo CRUD**: Example of clean RESTful API design.  
 - **Database Management**: PostgreSQL with Alembic migrations.  
@@ -29,13 +29,14 @@ Developing a backend from scratch can be challenging. This repository provides a
 4. [Run Locally without Docker](#run-locally-without-docker)  
 5. [Database Setup](#database-setup)  
 6. [Run Alembic Migrations](#run-alembic-migrations)  
-7. [Access the API](#access-the-api)  
-8. [Default Admin Credentials](#default-admin-credentials)  
-9. [Architecture Overview](#architecture-overview)  
-10. [Tech Stack](#tech-stack)  
-11. [Notes](#notes)  
-12. [Inspiration and References](#inspiration-and-references)  
-13. [Author](#author)  
+7. [Database Models](#database-models)  
+8. [Access the API](#access-the-api)  
+9. [Default Admin Credentials](#default-admin-credentials)  
+10. [Architecture Overview](#architecture-overview)  
+11. [Tech Stack](#tech-stack)  
+12. [Notes](#notes)  
+13. [Inspiration and References](#inspiration-and-references)  
+14. [Author](#author)  
 
 ---
 
@@ -161,6 +162,38 @@ alembic upgrade head
 
 ---
 
+## Database Models
+
+This project defines two main entities: **User** and **Todo**.
+
+### 👤 User Model
+
+| Field            | Type      | Notes                                |
+|------------------|-----------|--------------------------------------|
+| `id`             | int       | Primary key                          |
+| `username`       | str       | Unique, indexed                      |
+| `email`          | str       | Unique, indexed                      |
+| `hashed_password`| str       | Stored securely                      |
+| `created_at`     | datetime  | Auto-generated timestamp             |
+| `is_superuser`   | bool      | Defaults to `False`                  |
+| `todos`          | relation  | One-to-many → User can have many Todos |
+
+---
+
+### ✅ Todo Model
+
+| Field         | Type      | Notes                                  |
+|---------------|-----------|----------------------------------------|
+| `id`          | int       | Primary key                            |
+| `title`       | str       | Required                               |
+| `description` | str?      | Optional                               |
+| `completed`   | bool      | Defaults to `False`                    |
+| `created_at`  | datetime  | Auto-generated timestamp               |
+| `user_id`     | int       | Foreign key → references `users.id`    |
+| `owner`       | relation  | Many-to-one → Each Todo belongs to User |
+
+---
+
 ## Access the API
 
 * **Base URL** → [http://127.0.0.1:8000](http://127.0.0.1:8000)  
@@ -223,7 +256,6 @@ This project includes:
 * [JWT Authentication in FastAPI](https://fastapi.tiangolo.com/tutorial/security/)  
 
 ---
-
 
 ## Author
 
